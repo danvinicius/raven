@@ -14,13 +14,12 @@ export default {
     name: "News",
     data(){
         return {
-            news: null,
-            baseURL: `https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=`
+            news: null
         }
     },
     methods: {
         getNews(){
-            axios.get(`${this.baseURL}${process.env.VUE_APP_NEWS_API_KEY}`).then((response)=> {
+            axios.get(`https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=${process.env.VUE_APP_NEWS_API_KEY}`).then((response)=> {
                 this.news = response.data.articles
             })
         }

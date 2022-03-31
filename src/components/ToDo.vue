@@ -26,8 +26,6 @@ export default {
                 this.task = ""
             }
             document.getElementById("task").focus()
-            
-
         }
     },
     created(){

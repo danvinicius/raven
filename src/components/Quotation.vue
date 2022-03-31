@@ -18,13 +18,12 @@ export default {
     name: "Quotation",
     data(){
         return {
-            quotation: null,
-            baseURL: "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL,ETH-BRL"
+            quotation: null
         }
     },
     methods: {
         getQuotation(){
-            axios.get(this.baseURL).then((response)=> {
+            axios.get("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL,ETH-BRL").then((response)=> {
                 this.quotation = response.data
             })
         },
