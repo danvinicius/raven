@@ -1,27 +1,26 @@
 <template>
   <div class="home">
-    <Weather/>
+    <TheHeader/>
     <Quotation/>
     <News/>
-    <ToDo/>
-    <button @click="signout">Sign out</button>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Quotation from '@/components/Quotation.vue'
-import Weather from '@/components/Weather.vue'
 import News from '@/components/News.vue'
-import ToDo from '@/components/ToDo.vue'
+import TheHeader from '@/components/TheHeader.vue'
+import TheFooter from '@/components/TheFooter.vue'
 
 export default {
   name: 'Home',
   components: {
+    TheHeader,
     Quotation,
-    Weather,
     News,
-    ToDo
+    TheFooter,
   },
   methods: {
     signout(){
@@ -39,3 +38,12 @@ export default {
   }
 }
 </script>
+<style scoped>
+.home {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 120px auto 150px;
+  background: #3D84B8;
+  }
+
+</style>

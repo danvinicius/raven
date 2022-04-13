@@ -1,7 +1,8 @@
 <template>
-  <div id="container">
-      <div v-if="weather">
-        Clima {{user.city}}: {{temp}}°C | {{weatherMain}} <img :src="iconLink" alt="">
+  <div>
+      <div v-if="weather" class="weather">
+        <img :src="iconLink" alt="">
+        <p>{{temp}}°C</p> 
       </div>
   </div>
 </template>
@@ -35,11 +36,21 @@ export default {
         }
     },
     created(){
+        console.log("hi");
         this.getWeather()
     }
 }
 </script>
 
 <style scoped>
-
+.weather {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    position: relative;
+    top: 30px;
+}
+p {
+    font-size: 30px;
+}
 </style>

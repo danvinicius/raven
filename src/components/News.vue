@@ -1,11 +1,12 @@
 <template>
-  <div id="container">
-      <div v-if="news">
-          <div v-for="(news, index) in news" :key="index">
-                {{news.title}}  
+      <div v-if="news" class="container">
+        <div v-for="(news, index) in news" :key="index" class="card" style="width: 18rem;">
+            <img :src="news.urlToImage" :alt="news.title" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">{{news.title}}</p>
+            </div>
         </div>
       </div>
-  </div>
 </template>
 
 <script>
@@ -26,10 +27,27 @@ export default {
     },
     created(){
         this.getNews()
+        console.log(this.news);
     }
 }
 </script>
 
 <style scoped>
-
+    .container {
+        padding-top: 50px;
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+    .card {
+        background: #344FA1;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 5px;
+    }
+    .card img {
+        height: 200px;
+    }
 </style>

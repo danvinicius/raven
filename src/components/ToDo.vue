@@ -1,12 +1,13 @@
 <template>
-  <div id="container">
-      <input type="text" id="task" v-model="task" required autofocus>
-      <button @click.prevent="addTask">Add task</button>
-      <ul>
+  <div class="container">
+      <p style="text-decoration: underline;">Lista de tarefas</p>
+      <ol>
           <li v-for="(task, index) in tasks" :key="index">
               {{task}}
           </li>
-      </ul>
+      </ol>
+      <input type="text" id="task" v-model="task" required autofocus>
+      <button @click.prevent="addTask">Add task</button>
   </div>
 </template>
 
@@ -34,6 +35,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    background: #3f3697;
+}
 </style>
