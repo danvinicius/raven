@@ -4,7 +4,7 @@
       <br>
       <input type="password" placeholder="Password" v-model="password">
       <br>
-      <button @click.prevent="signin">Sign In</button>
+      <button class="btn" @click.prevent="signin">Sign In</button>
     </form>
 </template>
 
@@ -35,6 +35,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

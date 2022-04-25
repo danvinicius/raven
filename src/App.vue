@@ -31,6 +31,12 @@ img {
   display: block;
 }
 
+form {
+  padding: 40px;
+  border-radius: 30px;
+  background: #dedede;
+}
+
 .btn {
   display: block;
   padding: 10px 30px;
@@ -44,6 +50,9 @@ img {
   border: none;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .btn:hover {

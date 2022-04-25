@@ -10,6 +10,7 @@ export default createStore({
       city: "",
       email: "",
     },
+    tasks: [],
   },
   mutations: {
     //use commit
@@ -22,6 +23,9 @@ export default createStore({
     UPDATE_TOKEN(state, payload) {
       state.token = payload;
       localStorage.setItem("token", payload);
+    },
+    UPDATE_TASKS(state, payload) {
+      state.tasks.push(payload);
     },
   },
   actions: {

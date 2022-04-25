@@ -1,46 +1,48 @@
 <template>
-  <div class="container">
-      <p style="text-decoration: underline;">Lista de tarefas</p>
+  <div class="todo">
+      <h3 style="text-decoration: underline;">Minhas tarefas</h3>
       <ol>
-          <li v-for="(task, index) in tasks" :key="index">
+          <li v-for="(task, index) in this.$store.state.tasks" :key="index">
               {{task}}
           </li>
       </ol>
       <input type="text" id="task" v-model="task" required autofocus>
-      <button @click.prevent="addTask">Add task</button>
+      <button class="btn" @click.prevent="addTask">Add task</button>
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
     name: "ToDo",
     data(){
         return {
-            task: "",
-            tasks: []
+            task: ""
         }
     }, 
     methods: {
-        addTask(){
-            if (this.task.trim() != "") {
-                this.tasks.push(this.task)
+    addTask(){
+        if (this.task.trim() != "") {
+                document.getElementById("task").focus()
+                this.$store.commit("UPDATE_TASKS", this.task)
                 this.task = ""
             }
-            document.getElementById("task").focus()
         }
-    },
-    created(){
-
     }
 }
 </script>
 
 <style scoped>
-.container {
+.todo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    min-height: 300px;
     background: #3f3697;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+
+.todo input {
+    padding: 10px;
 }
 </style>

@@ -1,7 +1,12 @@
 <template>
   <header>
       <div id="left">
-          <h1>{{greeting}} {{username}}</h1>
+          <div v-if="this.$store.state.login">
+            <h1>{{greeting}} {{username}}</h1>
+          </div>
+          <div v-else>
+              <h1>Raven</h1>
+          </div>
       </div>
       
       <div id="right">

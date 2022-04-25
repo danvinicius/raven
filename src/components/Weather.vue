@@ -47,8 +47,7 @@ export default {
     display: flex;
     align-items: center;
     justify-self: flex-end;
-    position: relative;
-    top: 30px;
+    padding-right: 10px;
 }
 p {
     font-size: 30px;

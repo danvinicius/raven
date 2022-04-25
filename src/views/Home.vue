@@ -14,13 +14,14 @@ import News from '@/components/News.vue'
 import TheHeader from '@/components/TheHeader.vue'
 import TheFooter from '@/components/TheFooter.vue'
 
+
 export default {
   name: 'Home',
   components: {
     TheHeader,
     Quotation,
     News,
-    TheFooter,
+    TheFooter
   },
   methods: {
     signout(){

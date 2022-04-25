@@ -8,14 +8,19 @@
             <span class="currency"> Ethereum (ETH)</span> <span class="value">{{getCurrency(quotation.ETHBRL.low)}}</span>
         </div>
     </div>
+    <ToDo/>
+    <span @click="logout" id="sair">Sair</span>
   </div>
 </template>
 
 <script>
 import axios from "axios"
+import ToDo from '@/components/ToDo.vue'
 export default {
     name: "Quotation",
-
+    components: {
+        ToDo
+    },
     data(){
         return {
             quotation: null
@@ -29,6 +34,11 @@ export default {
         },
         getCurrency(currency){
             return Number(currency).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+        },
+        logout(){
+            this.$store.commit("UPDATE_LOGIN", false)
+                this.$store.commit("UPDATE_TOKEN", "")
+                this.$router.push("/")
         }
     },
     created(){
@@ -46,7 +56,7 @@ export default {
     background: #344FA1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     flex-direction: column;
     height: 110%;
 
@@ -61,5 +71,10 @@ export default {
     .value {
         font-weight: bold;
         margin-bottom: 15px;
+    }
+    #sair {
+        margin-top: 300px;
+        color: rgb(255, 84, 53);
+        cursor: pointer;
     }
 </style>

@@ -8,7 +8,7 @@
       <br>
       <input type="text" placeholder="City" v-model="city">
       <br>
-      <button @click.prevent="signup">Sign Up</button>
+      <button class="btn" @click.prevent="signup">Sign Up</button>
     </form>
 </template>
 
@@ -43,6 +43,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
