@@ -6,8 +6,8 @@
               {{task}}
           </li>
       </ol>
-      <input type="text" id="task" v-model="task" required autofocus>
-      <button class="btn" @click.prevent="addTask">Add task</button>
+      <input type="text" id="task" @keydown.enter="addTask" v-model="task" required autofocus>
+      <button class="btn task-button" @click.prevent="addTask">Add task</button>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     min-height: 300px;
-    background: #3f3697;
+    background: var(--main-color);
     padding: 30px 20px;
     border-radius: 20px;
 }
@@ -45,4 +45,10 @@ export default {
 .todo input {
     padding: 10px;
 }
+
+.task-button {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
 </style>

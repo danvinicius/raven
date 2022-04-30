@@ -2,10 +2,10 @@
   <header>
       <div id="left">
           <div v-if="this.$store.state.login">
-            <h1>{{greeting}} {{username}}</h1>
+            <h1>{{greeting}} <b>{{username}}</b></h1>
           </div>
           <div v-else>
-              <h1>Raven</h1>
+              <h1 id="logo">Raven</h1>
           </div>
       </div>
       
@@ -69,17 +69,23 @@ export default {
 
 <style scoped>
 header {
-    background: #3f3697;
+    background: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
     grid-column: 1 / -1;
     grid: 1 / 2;
+    box-shadow: 0 2px 4px rgba(30, 60, 90, 1.);
 }
 h1 {
     font-size: 50px;
     font-weight: normal;
+}
+
+#logo {
+    font-family: 'Leckerli One';
+    font-weight: 100;
 }
 
 #right {

@@ -1,14 +1,16 @@
 <template>
   <form>
-      <input type="text" placeholder="Name" v-model="name">
+    <h3>Ainda não possui uma <br> conta? Cadastre-se</h3>
+<br>
+      <input type="text" placeholder="Nome" v-model="name">
       <br>
       <input type="email" placeholder="E-mail" v-model="email">
       <br>
-      <input type="password" placeholder="Password" v-model="password">
+      <input type="password" placeholder="Senha" v-model="password">
       <br>
-      <input type="text" placeholder="City" v-model="city">
+      <input type="text" placeholder="Cidade" v-model="city">
       <br>
-      <button class="btn" @click.prevent="signup">Sign Up</button>
+      <button class="btn" @click.prevent="signup">Cadastrar</button>
     </form>
 </template>
 

@@ -1,10 +1,12 @@
 <template>
   <form>
+        <h3>Entre com sua conta</h3>
+    <br>
       <input type="email" placeholder="E-mail" v-model="email">
       <br>
-      <input type="password" placeholder="Password" v-model="password">
+      <input type="password" placeholder="Senha" v-model="password">
       <br>
-      <button class="btn" @click.prevent="signin">Sign In</button>
+      <button class="btn" @click.prevent="signin">Entrar</button>
     </form>
 </template>
 
@@ -36,5 +38,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

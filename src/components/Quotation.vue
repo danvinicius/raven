@@ -9,7 +9,7 @@
         </div>
     </div>
     <ToDo/>
-    <span @click="logout" id="sair">Sair</span>
+    <span @click="logout" id="sair">Sair <i class="fa-solid fa-power-off"></i></span>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ export default {
     padding: 15px 0;
     grid-column: 5/6;
     grid-row: 2/3;
-    background: #344FA1;
+    background: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: start;
@@ -73,8 +73,12 @@ export default {
         margin-bottom: 15px;
     }
     #sair {
-        margin-top: 300px;
-        color: rgb(255, 84, 53);
+        margin-top: 40px;
+        color: rgb(255, 40, 2);
         cursor: pointer;
+        transition: .3s;
+    }
+    #sair:hover {
+        text-decoration: underline;
     }
 </style>

@@ -19,14 +19,14 @@ export default {
 footer {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    background: #f0ebcc;
-    color: #041C32;
+    background: var(--footer-color);
+    color: var(--footer-text-color);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     position: relative;
-    top: 50px;
+    top: 0px;
     font-size: 25px;
 }
 </style>

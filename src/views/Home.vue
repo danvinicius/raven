@@ -44,7 +44,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 120px auto 150px;
-  background: #3D84B8;
+  background: var(--background-color);
   }
 
 </style>
