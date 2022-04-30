@@ -20,7 +20,7 @@ Simple page with daily news, exchange rate, weather info and do do list made in 
 
 ## The project
 <b>
- <img src='src/raven_welcome.png' alt='A4D' title='A4D'>
+ <img src='src/raven_screenshot.png' alt='A4D' title='A4D'>
  <br/><br/>
 <img src='src/raven_home.png' alt='A4D' title='A4D'>
 <br/>
