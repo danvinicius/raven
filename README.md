@@ -14,7 +14,7 @@ Simple page with daily news, exchange rate, weather info and do do list made in 
 
 ## Project status
 <h4> 
-	🚧 A4D 🚀 Under construction... 🚧
+	🚧 Raven 🚀 Under construction... 🚧
 </h4>
 <br/>
 
