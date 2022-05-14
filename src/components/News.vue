@@ -2,7 +2,7 @@
       <div v-if="news" class="container">
         <div v-for="(news, index) in news" :key="index" class="card" style="width: 18rem;">
             <a :href="news.url" target="_blank">
-                <img :src="news.urlToImage" :alt="news.title" class="card-img-top">
+                <img :src="news.urlToImage == null ? 'https://raw.githubusercontent.com/danvinicius/raven/master/src/assets/cnn.png' : news.urlToImage" :alt="news.title" class="card-img-top">
             <div class="card-body">
                 <p class="card-text" >{{news.title}}</p>
             </div>
