@@ -1,7 +1,7 @@
 # Raven
 
 ## About
-Simple page with daily news, exchange rate, weather info and to do list made in VueJS and consuming API made in Express via axios.
+Simple page with daily news, exchange rate, weather info and soccer matches scoreboard made in VueJS and consuming API made in Express via axios.
 <br/>
 
 <div style="display: inline_block"><br>
