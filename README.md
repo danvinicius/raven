@@ -20,9 +20,9 @@ Simple page with daily news, exchange rate, weather info and to do list made in 
 
 ## The project
 <b>
- <img src='src/raven_screenshot.png' alt='A4D' title='A4D'>
+ <img src='src/assets/raven_screenshot.png' alt='A4D' title='A4D'>
  <br/><br/>
-<img src='src/raven_home.png' alt='A4D' title='A4D'>
+<img src='src/assets/raven_home.png' alt='A4D' title='A4D'>
 <br/>
 
 ## Project setup
