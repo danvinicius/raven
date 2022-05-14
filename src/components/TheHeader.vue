@@ -37,7 +37,6 @@ export default {
         greeting(){
             let greeting;
             const time = new Date().getHours()
-            console.log(time);
             if (time >= 3 && time < 12) {
                 greeting = "Bom dia, "
             } else if (time >= 12 && time < 18) {

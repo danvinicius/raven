@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="this.$store.state.login">
       <div v-if="weather" class="weather">
         <img :src="iconLink" alt="">
         <p>{{temp}}°C</p> 
@@ -36,7 +36,6 @@ export default {
         }
     },
     created(){
-        console.log("hi");
         this.getWeather()
     }
 }

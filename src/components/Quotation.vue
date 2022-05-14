@@ -8,18 +8,18 @@
             <span class="currency"> Ethereum (ETH)</span> <span class="value">{{getCurrency(quotation.ETHBRL.low)}}</span>
         </div>
     </div>
-    <ToDo/>
+    <ScoreBoard/>
     <span @click="logout" id="sair">Sair <i class="fa-solid fa-power-off"></i></span>
   </div>
 </template>
 
 <script>
 import axios from "axios"
-import ToDo from '@/components/ToDo.vue'
+import ScoreBoard from '@/components/ScoreBoard.vue'
 export default {
     name: "Quotation",
     components: {
-        ToDo
+        ScoreBoard
     },
     data(){
         return {
@@ -59,10 +59,15 @@ export default {
     justify-content: start;
     flex-direction: column;
     height: 110%;
+    
 
 }
 .currencies {
     text-align: center;
+    background: var(--main-color);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
     span {
         display: block;

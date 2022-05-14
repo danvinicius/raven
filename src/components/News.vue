@@ -30,7 +30,6 @@ export default {
     },
     created(){
         this.getNews()
-        console.log(this.news);
     }
 }
 </script>
